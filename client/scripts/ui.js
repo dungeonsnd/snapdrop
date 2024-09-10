@@ -39,6 +39,7 @@ class PeersUI {
         const $peer = $(peerId);
         if (!$peer) return;
         $peer.remove();
+        window.animateBackground(true)
     }
 
     _onFileProgress(progress) {
