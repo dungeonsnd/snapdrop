@@ -30,3 +30,6 @@ sed -i 's|<h1>Snapdrop</h1>|<h1>rvdrop</h1>|g'  translation/zhcn/client/index.ht
 sed -i 's|The easiest way to transfer files across devices|跨设备传输文件的最简单方式|g'  translation/zhcn/client/index.html
 
 sed -i 's|Click to send files or right click to send a text|点击以发送文件或右键点击以发送文本|g'  translation/zhcn/client/scripts/ui.js
+
+sed -i 's|You are known as|您的名称显示为 |g'  translation/zhcn/client/scripts/ui.js
+
