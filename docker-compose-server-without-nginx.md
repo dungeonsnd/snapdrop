@@ -3,7 +3,7 @@
 ## run
 
 ```bash
-cd /opt/program/snapdrop/
+cd /opt/program/snapdrop/ # modify to your path
 docker compose -f docker-compose-server-without-nginx.yml up -d
 ```
 
@@ -11,18 +11,18 @@ docker compose -f docker-compose-server-without-nginx.yml up -d
 
 ```bash
 server {
-    server_name drop.exampledomain.xyz;
+    server_name drop.exampledomain.xyz; # modify to your domain
 
     expires epoch;
 
-    location / {
-        root   /opt/program/snapdrop/translation/zhcn/client;
+    location /en {
+        alias   /opt/program/snapdrop/client; # modify to your path
         index  index.html index.htm;
         charset utf-8;
     }
 
-    location /en {
-        root   /opt/program/snapdrop/client;
+    location / {
+        root   /opt/program/snapdrop/translation/zhcn/client; # modify to your path
         index  index.html index.htm;
         charset utf-8;
     }
@@ -35,21 +35,21 @@ server {
         proxy_set_header X-Forwarded-for $remote_addr;
     }
 
-    listen 443 ssl; # managed by Certbot
+    listen 443 ssl;
 
-    ssl_certificate /etc/certs/drop.exampledomain.xyz/fullchain.pem;
-    ssl_certificate_key /etc/certs/drop.exampledomain.xyz/privkey.pem;
+    ssl_certificate /etc/certs/drop.exampledomain.xyz/fullchain.pem; # modify to your path
+    ssl_certificate_key /etc/certs/drop.exampledomain.xyz/privkey.pem; # modify to your path
 
 }
 
 server {
     listen 80;
     listen [::]:80;
-    server_name drop.exampledomain.xyz;
+    server_name drop.exampledomain.xyz;  # modify to your domain
 
     location / {
-        if ($host = 'drop.exampledomain.xyz') {
-            rewrite ^/(.*)$ https://drop.exampledomain.xyz:443 permanent;
+        if ($host = 'drop.exampledomain.xyz') {  # modify to your domain
+            rewrite ^/(.*)$ https://drop.exampledomain.xyz:443 permanent;  # modify to your domain
         }
     }
 }
