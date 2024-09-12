@@ -20,11 +20,11 @@ sed -i 's|Ask to save each file before downloading|在下载前询问是否保�
 sed -i 's|Save|保存|g'  translation/zhcn/client/index.html
 sed -i 's|Ignore|忽略|g'  translation/zhcn/client/index.html
 sed -i 's|Send a Message|发送消息|g'  translation/zhcn/client/index.html
-sed -i 's|Send|发送|g'  translation/zhcn/client/index.html
-sed -i 's|Cancel|取消|g'  translation/zhcn/client/index.html
+sed -i 's|Send</button>|发送</button>|g'  translation/zhcn/client/index.html
+sed -i 's|Cancel</a>|取消</a>|g'  translation/zhcn/client/index.html
 sed -i 's|Message Received|消息已接收|g'  translation/zhcn/client/index.html
-sed -i 's|Copy|复制|g'  translation/zhcn/client/index.html
-sed -i 's|Close|关闭|g'  translation/zhcn/client/index.html
+sed -i 's|Copy</button>|复制</button>|g'  translation/zhcn/client/index.html
+sed -i 's|Close</button>|关闭</button>|g'  translation/zhcn/client/index.html
 sed -i 's|File Transfer Completed|文件传输完成|g'  translation/zhcn/client/index.html
 sed -i 's|<h1>Snapdrop</h1>|<h1>rvdrop</h1>|g'  translation/zhcn/client/index.html
 sed -i 's|The easiest way to transfer files across devices|跨设备传输文件的最简单方式|g'  translation/zhcn/client/index.html
